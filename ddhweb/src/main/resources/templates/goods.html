@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分类</title>
+   <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <style>
+
+        .navcat{
+            float:left;
+            width:20%;
+            height: 700px;
+            background:#f7f7f7;
+            text-align:center;
+            overflow-y:scroll;
+            overflow-x:scroll;
+        }
+        .navcat::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 1px;     /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+            background: white;
+            /*display: none;*/
+        }
+        .navcat::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+
+            opacity:10;
+        }
+        /*鼠标悬浮在该类指向的控件上时滑块的样式*/
+        .navcat:hover::-webkit-scrollbar-thumb {
+            border-radius: 1px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background: #f7f7f7;
+            opacity:0.5;
+        }
+        .navcat::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            background: white;
+            display: none;
+        }
+
+       /* .navcat ul{
+            width:100%;
+        }*/
+
+        .navcat ul li{
+            height:35px;
+            cursor:default;
+            padding-top:10px;
+            font-size:15px;
+            width:100%;
+        }
+
+        .active{
+            list-style-type:show;
+            background: white;
+        }
+
+        .content{
+            float:left;
+            width:80%;
+            height: 700px;
+            /*background:#dddddd;*/
+            margin: 0 auto;
+            overflow-y:scroll;
+            overflow-x:scroll;
+        }
+
+        .content::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 1px;     /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+            background: white;
+            /*display: none;*/
+        }
+        .content::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+
+            opacity:10;
+        }
+        .content::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            background: white;
+            display: none;
+        }
+
+        .goods{
+            border-bottom:1px solid #eee;
+            width:92%;
+            height:315px;
+            margin: 0 auto;
+            text-align:center
+        }
+        .goods-detail{
+            width:100%;
+            height:45px;
+            margin:0 auto;
+            border-bottom:1px solid #F2F2F2;
+        }
+        .goods-detail-left{
+            float:left;
+            width:85%;
+            height:45px;
+            border-right: 1px solid #F2F2F2;
+            text-align:left;
+            white-space:normal; word-break:break-all;overflow:hidden;
+        }
+        .goods-detail-left span{
+            margin-left: 0px;
+            font-size:18px;
+            color:#000033;
+        }
+        .goods-detail-right{
+            float:right;
+            width:14%;
+            height:45px;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .goods-detail-right-num{
+            font-size:10px;
+            color:#ffcc66;
+        }
+        .goods-detail-right-text{
+            font-size:10px;
+            color:#000033;
+        }
+
+        .sail-state{
+            width:100%;
+            margin:0 auto;
+        }
+        .sail-state-left{
+            float:left;width:60%;height:30px;text-align: left;margin-top: 5px;
+        }
+        .sail-state-left span{
+            margin-left: 0px;font-size:13px;color:#e5595c;
+        }
+        .sail-state-right{
+            float: right;
+            width: 40%;
+            height: 30px;
+            text-align: right;
+            margin-top: 5px;
+        }
+        .sail-state-right-limit{
+            margin-right: 0px;font-size:10px;color:#e5595c;
+        }
+        .sail-state-right-sailed{
+            margin-right: 0px;font-size:15px;color:#000000;
+        }
+        .sail-state-right-sailed label{
+            color:#f13e3b;
+        }
+
+        .buying{
+            width:100%;margin:0 auto;height:50px;
+        }
+        .buying-price{
+            float:left;width:75%;height:30px;text-align: left;margin-top: 10px;
+        }
+        .buying-price-unit{
+            margin-left: 0px;font-size:23px;color:#e5595c;
+        }
+        .buying-operation{
+            float:right;width:25%;height:30px;text-align: right;margin-top: 10px;
+        }
+        .buying-operation-button{
+            margin-right: 0px;height:28px;background: #a00300;border-radius:5px;line-height: 28px;text-align: center;
+        }
+        .buying-operation-button-font{
+            font-size:15px;color:white;
+        }
+        .buying-operation-add-sub{
+            height:28px;width:100%;display:none;text-align: center;
+        }
+        .buying-num{
+            font-size:20px;
+            vertical-align:middle;
+        }
+        .buying-num-sub{
+            vertical-align:middle;float: left;
+        }
+        .buying-num-add{
+            vertical-align:middle;float:right;
+        }
+
+        .footer .number {
+            position: absolute;
+            left: 63%;
+            top: -2px;
+            background-color: red;
+            color: #fff;
+            line-height: 15px;
+            width: 15px;
+            border-radius: 24px;
+            text-align: center;
+            font-size: 5px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="topssbox1">
+    <div class="topss">
+        <a href="seacher">
+            <div class="topssbox">
+                <img src="images/s.png" />
+            </div>
+        </a>
+    </div>
+</div>
+<div style="height:40px"></div>
+<div style="width:100%;height: 100%;">
+    <div class="navcat">
+        <ul>
+            <li class="active">水果馆</li>
+            <li>蔬菜馆</li>
+            <li>肉肉馆</li>
+            <li>家禽馆</li>
+            <li>水产馆</li>
+            <li>蛋蛋馆</li>
+            <li>豆腐馆</li>
+            <li>生鲜批发</li>
+            <li>品牌日</li>
+            <li>香炸诱惑</li>
+            <li>家庭批发</li>
+            <li>牛奶馆</li>
+            <li>烘焙馆</li>
+            <li>农副馆</li>
+            <li>休闲零食</li>
+            <li>酒水乳饮</li>
+            <li>粮油调味</li>
+            <li>餐食料理</li>
+            <li>家居家清</li>
+            <li>服饰穿戴</li>
+            <li>美容个护</li>
+            <li>母婴文体</li>
+            <li>绿植花卉</li>
+            <li>家电数码</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div style="height:8px"></div>
+
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script type="text/javascript">
+
+$(function(){
+
+    $(".navcat").on("click","li",function(){
+        //alert($(this).html());
+        $(".navcat").find("li").removeClass("active");
+        $(this).addClass("active");
+    });
+    getGoodsTemplete();
+    //getContent();
+   /* $(".content").scroll(function(){
+        getContent();
+    });*/
+});
+var goodsTemplete;
+
+function getGoodsTemplete(){
+    $.ajax({
+        url:getRootPath()+"/templete/goods.txt",
+        type:"get",
+        success:function(data){
+            goodsTemplete = data;
+            getContent();
+        }
+    });
+
+}
+
+function getContent(){
+    $.ajax({
+        url:getRootPath()+"/data/goodsList.json",
+        type:"get",
+        dataType:"json",
+        success:function(data){
+            var str = goodsTemplete;
+            $.each(data, function(i,list){
+                str = str.replace(/{goodsName}/,list.goodsName);
+                str = str.replace(/{goodsImg}/,list.goodsImg);
+                str = str.replace(/{buzz}/,list.buzz);
+                str = str.replace(/{preTime}/,list.preTime);
+                str = str.replace(/{getTime}/,list.getTime);
+                str = str.replace(/{limitNum}/,list.limitNum);
+                str = str.replace(/{sailNum}/,list.sailNum);
+                str = str.replace(/{price}/,list.price);
+                $(".content").append(str);
+                str = goodsTemplete;
+            });
+
+        }
+    });
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+[
+  {
+    "goodsName": "小熊玩具ssssssssssssssssssssssssssssssssssssssssssssssssss",
+    "goodsImg": "images/sp/sp1.jpg",
+    "buzz": 110000,
+    "preTime": "2020-06-04",
+    "getTime": "2020-06-05",
+    "limitNum": "80000",
+    "sailNum": "300",
+    "price": 50
+  },
+  {
+    "goodsName": "哈密瓜",
+    "goodsImg": "images/sp/sp2.jpg",
+    "buzz": 1500000,
+    "preTime": "2020-06-04",
+    "getTime": "2020-06-05",
+    "limitNum": "80000",
+    "sailNum": "100",
+    "price": 30
+  },
+  {
+    "goodsName": "原玉石",
+    "goodsImg": "images/sp/sp3.jpg",
+    "buzz": "1000",
+    "preTime": "2020-06-04",
+    "getTime": "2020-06-05",
+    "limitNum": "500",
+    "sailNum": "3",
+    "price": 1000
+  },
+  {
+    "goodsName": "水蜜桃",
+    "goodsImg": "images/sp/sp6.jpg",
+    "buzz": "1000",
+    "preTime": "2020-06-04",
+    "getTime": "2020-06-05",
+    "limitNum": "500",
+    "sailNum": "3",
+    "price": 10
+  }
+]

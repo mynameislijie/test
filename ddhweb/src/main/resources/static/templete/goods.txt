@@ -1,0 +1,51 @@
+  <div class="goods">
+    <div style="width:100%;height:180px;background-image: url('{goodsImg}');background-size:cover;">
+      <div style="width:100%;height:90px;"></div>
+      <div style="width:100%;height:90px;padding-top:60px;padding-left:360px;">
+         <div style="width:100px;height:20px;border: 1px solid #F2F2F2;border-radius:10px;background:#808080;color:#FFFFFF;">
+            点击查看详情
+            <!-- <img style="height:15px;vertical-align:middle;" src="images/my/sj.jpg"/>-->
+         </div>
+      </div>
+
+    </div>
+    <div class="goods-detail">
+        <div class="goods-detail-left">
+            <span>{goodsName}</span>
+        </div>
+        <div class="goods-detail-right">
+            <span class="goods-detail-right-num">{buzz}</span><br/>
+            <span class="goods-detail-right-text">人气值</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="sail-state">
+        <div class="sail-state-left">
+            <span>预售时间：{preTime}</span><br/>
+            <span>提货时间：{getTime}</span>
+        </div>
+        <div class="sail-state-right">
+            <span class="sail-state-right-limit">{limitNum}</span><br/>
+            <span class="sail-state-right-sailed">今日已售<label>{sailNum}</label>份</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="buying">
+        <div class="buying-price">
+            <span class="buying-price-unit">￥<label>{price}</label></span>
+        </div>
+        <div class="buying-operation">
+
+            <div class="buying-operation-button" onclick="clickBuyButton(this);">
+                <span class="buying-operation-button-font">加入购物车</span>
+            </div>
+
+             <div class="buying-operation-add-sub">
+                 <img src="images/my/sub.jpg" class="buying-num-sub" onclick="clickSub(this);"/>
+                 <label class="buying-num">0</label>
+                 <img src="images/my/add.jpg" class="buying-num-add" onclick="clickAdd(this);"/>
+             </div>
+        </div>
+    </div>
+</div>
+<div style="height:10px;"></div>

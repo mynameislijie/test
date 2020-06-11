@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<script>/*@cc_on window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+<title></title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<script src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	var h = $(".wlbox3 ul li:first-child").height()/2;<!--第一个li高度的一半-->
+	var h1 = $(".wlbox3 ul li:last-child").height()/2;<!--最后一个li高度的一半-->
+	$(".line").css("top",h);
+	$(".line").height($(".wlbox3").height()-h1-h);
+});
+</script>
+</head>
+
+<body style="background:#fff">
+<div class="headerbox">
+  <div class="header">
+    <div class="headerL">
+      <a onclick="javascript:history.back(-1)" class="goback"><img src="images/goback.png" /></a>
+    </div>
+    <div class="headerC">
+      <p>物流查询</p>
+    </div>
+    <div class="headerR"></div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="hbox"></div>
+<div class="wuliubox">
+  <div class="wlbox1">快递公司：百世汇通   快递号：846846984123265</div>
+  <div class="wlbox2">物流信息</div>
+  <div class="wlbox3">
+     <div class="line"></div>
+     <ul>
+       <li>
+         <p>客户已签收，感谢使用百世汇通，期待再次为您服务</p>
+         <p>2015-11-16  17:26：36</p>
+       </li>
+       <li>
+         <p>陕西省西安市南郊二部公司(点击查询电话)高**派件中，派件员电话：15126987545</p>
+         <p>2015-11-16  17:26：36</p>
+       </li>
+       <li>
+         <p>西安运转中心已发出，下一站 陕西省西安市南郊二部</p>
+         <p>2015-11-16  17:26：36</p>
+       </li>
+       <li>
+         <p>西安运转中心已收入</p>
+         <p>2015-11-16  17:26：36</p>
+       </li>
+       <li>
+         <p>杭州运转中心已收入</p>
+         <p>2015-11-16  17:26：36</p>
+       </li>
+       <li>
+         <p>浙江省杭州市秋涛路公司已打包</p>
+         <p>2015-11-16  17:26：36</p>
+       </li>
+       <li>
+         <p>浙江省杭州市秋涛路公司已打包</p>
+         <p>2015-11-16  17:26：36</p>
+       </li>
+     </ul>
+  </div>
+</div>
+
+
+</body>
+</html>
